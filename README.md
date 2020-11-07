@@ -2,6 +2,16 @@
 
 # playstation2 set-up guide (noob friendly)
 
+## **目录**
+
+[机型](#1机型models)
+[配件](#2配件accessories)
+[破解](#3破解soft-mod)
+[配置网络硬盘Windows](#windows10篇)
+[配置网络硬盘Linux](#linux篇)
+
+
+
 
 ## **1.机型(models)**
 
@@ -103,7 +113,7 @@ z
 ![game](https://gitee.com/waizui/ps2guide/raw/main/images/games.jpg)
 
 ### Linux篇
-    如果你有使用linux的需求，我假定你已经懂了基本的知识。本人的测试机为树莓派3b+,系统为raspbian外挂硬盘，分区为ntfs。
+    如果你有使用linux的需求，我假定你已经懂了基本的知识。本人的测试机为树莓派3b+,系统为raspbian外挂硬盘，分区为ntfs。以下命令对于Debian系通用。
 
 在你的ntfs分区上建立一个ps2smb的文件夹.
 
@@ -115,7 +125,10 @@ z
 
      vim /etc/samba/smb.conf
 在尾部追加图中的文字
-![smb]()，其中，将path改为你自己的ps2smb文件夹的路径,保存退出
+
+![smb](https://gitee.com/waizui/ps2guide/raw/main/images/smb.png)
+
+其中，将path改为你自己的ps2smb文件夹的路径,保存退出
 
 然后重启samba
     
@@ -123,7 +136,9 @@ z
 打开ps2，插入网线，选中opl进入，按下手柄start键进入设置，然后按圆圈键选择网络设置。进入设置后，将下图1处ps2的IP地址配置为你想要的地址，IP地址模式设置为静态。将2处的地址填上开启samba服务的linux服务端地址，将共享处填上ps2smb,将使用者填上任意字符,密码不用填,完成后点重新连接，成功后返回，点击保存设置，不然下次启动还需要配置ip地址。
 ![ps2conf](https://gitee.com/waizui/ps2guide/raw/main/images/congtest1.png)
 
-回到电脑，你会看到刚刚建立的ps2smb文件夹下多了许多文件夹，其中有一个叫做DVD的文件夹，所有你从网上下载的ps2游戏，都是以iso为后缀名的，放到这个文件夹下面，ps2会自动识别。![ps2folder]()
+回到电脑，你会看到刚刚建立的ps2smb文件夹下多了许多文件夹，其中有一个叫做DVD的文件夹，所有你从网上下载的ps2游戏，都是以iso为后缀名的，放到这个文件夹下面，ps2会自动识别。
+
+![ps2folder](https://gitee.com/waizui/ps2guide/raw/main/images/linuxFolder.png)
 
 放入游戏后，在ps2中，进入opl后，选择ETH游戏，就能看到你刚刚放入的游戏，圆圈键运行。这里推荐一个下载游戏ISO的网站<https://www.oldmanemu.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f/ps2/ps2%e4%b8%ad%e6%96%87%e6%b8%b8%e6%88%8f%e5%85%a8%e9%9b%86>
 ![game](https://gitee.com/waizui/ps2guide/raw/main/images/games.jpg)
