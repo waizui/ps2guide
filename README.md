@@ -62,9 +62,9 @@
     >![memoryCard](https://gitee.com/waizui/ps2guide/raw/main/images/memorycard.jpg)
 z
 1. 
-    >视频线(video cable):ps2支持几种视频输出格式，这里我本人只推荐两种  
+    >视频线(video cable):ps2支持几种视频输出格式，这里我只推荐两种  
         
-    >1.分量色差线(component cable)：也是是色差端子，部分电视有色差接口，优点是画质清晰，缺点是不好转接到显示器（转接器贵），且有一部分电视不支持。ps2不附带此线，一般需要另外购买。配图本人用的是色差端子，长这样:
+    >1.分量色差线(component cable)：也是是色差端子，部分电视有色差接口，优点是画质清晰，缺点是不好转接到显示器（转接器贵），且有一部分电视不支持。ps2不附带此线，一般需要另外购买。配图是我用的色差端子，长这样:
     >>![componentCable](https://gitee.com/waizui/ps2guide/raw/main/images/componentcable1.jpg)
     >>购买分量线时要注意你的电视机后面有没有这样的五个插口，上面写得有Pr，Pb,y
     >>![componentCable1](https://gitee.com/waizui/ps2guide/raw/main/images/componentcable.jpg)
@@ -90,7 +90,7 @@ z
 配置网络硬盘会分为两部分，配置Windows10的网络硬盘（新手向），配置Linux的网络硬盘(进阶)。
 
 > Q:我可以用U盘吗?
->>A:可以，但是不推荐，ps2的USB接口非常老，速率很低，用U盘玩会导致游戏随时在加载，没有乐趣。
+>>A:可以，但是不推荐，ps2的USB接口非常老，速率很低，用U盘玩会导致游戏频繁的在加载，丧失了乐趣。
 
 ### Windows10篇
 
