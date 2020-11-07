@@ -79,11 +79,14 @@ z
 
 配置网络硬盘会分为两部分，配置Windows10的网络硬盘（新手向），配置Linux的网络硬盘(进阶)。
 
+> Q:我可以用U盘吗?
+>>A:可以，但是不推荐，ps2的USB接口非常老，速率很低，用U盘玩会导致游戏随时在加载，没有乐趣。
+
 ### Windows10篇
 
 >1.建立一个名为ps2smb的文件夹，注意路径最好是全英文。右键该文件夹，选择属性->共享->共享，添加一个叫做everyone的账户,然后点击共享。![eveyone](https://gitee.com/waizui/ps2guide/raw/main/images/everyone.png)
 
->2.打开: 打开控制面板->程序和功能->启用或关闭Windows功能->SMB1.0/Cifs文件共享支持,勾选图中的选项，![panel](https://gitee.com/waizui/ps2guide/raw/main/images/controlpanel.png)
+>2.打开: 打开控制面板->程序和功能->启用或关闭Windows功能->SMB1.0/Cifs文件共享支持,勾选图中的选项。![panel](https://gitee.com/waizui/ps2guide/raw/main/images/controlpanel.png)
 
 >3.在网络和共享中心中，将有密码保护的共享关闭。![closepwd](https://gitee.com/waizui/ps2guide/raw/main/images/localnetwork.png)
 
@@ -91,10 +94,36 @@ z
     记下图中的ipv4地址，待会儿要用。
 
 >5.打开ps2，在背后插入你家的路由器接出来的网线，选中opl进入，按下手柄start键进入设置，然后按圆圈键选择网络设置。
-    >>进入设置后，将下图1处的地址配置为192.168.0.10，IP地址模式设置为静态。将2处的地址填上刚刚记下的ipv4地址，将共享处填上ps2smb,将使用者天使guest,密码不用填,完成后点重新连接，如果连接失败，可能是地址被占用。可以将1处的地址最后一位数换一下再试。成功或返回，点击保存设置，不然下次启动还需要配置ip地址。
-    ![ps2conf](https://gitee.com/waizui/ps2guide/raw/main/images/psconf.png)
+    >>进入设置后，将下图1处的地址配置为192.168.0.10，IP地址模式设置为静态。将2处的地址填上刚刚记下的ipv4地址，将共享处填上ps2smb,将使用者填上guest,密码不用填,完成后点重新连接，如果连接失败，可能是地址被占用。可以将1处的地址最后一位数换一下再试。成功后返回，点击保存设置，不然下次启动还需要配置ip地址。
+    ![ps2conf](https://gitee.com/waizui/ps2guide/raw/main/images/congtest1.png)
 
 >6.回到电脑，你会看到刚刚建立的ps2smb文件夹下多了许多文件夹，其中有一个叫做DVD的文件夹，所有你从网上下载的ps2游戏，都是以iso为后缀名的，放到这个文件夹下面，ps2会自动识别。![DVD](https://gitee.com/waizui/ps2guide/raw/main/images/dvdFolder.png)
 
 >7.放入游戏后，在ps2中，进入opl后，选择ETH游戏，就能看到你刚刚放入的游戏，圆圈键运行。这里推荐一个下载游戏ISO的网站<https://www.oldmanemu.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f/ps2/ps2%e4%b8%ad%e6%96%87%e6%b8%b8%e6%88%8f%e5%85%a8%e9%9b%86>
+![game](https://gitee.com/waizui/ps2guide/raw/main/images/games.jpg)
+
+### Linux篇
+    如果你有使用linux的需求，我假定你已经懂了基本的知识。本人的测试机为树莓派3b+,系统为raspbian外挂硬盘，分区为ntfs。
+
+在你的ntfs分区上建立一个ps2smb的文件夹.
+
+安装samba
+
+    sudo apt install samba
+
+编辑samba.conf 使用你自己熟悉的编辑器,这里使用vim
+
+     vim /etc/samba/smb.conf
+在尾部追加图中的文字
+![smb]()，其中，将path改为你自己的ps2smb文件夹的路径,保存退出
+
+然后重启samba
+    
+    sudo service smbd restart
+打开ps2，插入网线，选中opl进入，按下手柄start键进入设置，然后按圆圈键选择网络设置。进入设置后，将下图1处ps2的IP地址配置为你想要的地址，IP地址模式设置为静态。将2处的地址填上开启samba服务的linux服务端地址，将共享处填上ps2smb,将使用者填上任意字符,密码不用填,完成后点重新连接，成功后返回，点击保存设置，不然下次启动还需要配置ip地址。
+![ps2conf](https://gitee.com/waizui/ps2guide/raw/main/images/congtest1.png)
+
+回到电脑，你会看到刚刚建立的ps2smb文件夹下多了许多文件夹，其中有一个叫做DVD的文件夹，所有你从网上下载的ps2游戏，都是以iso为后缀名的，放到这个文件夹下面，ps2会自动识别。![ps2folder]()
+
+放入游戏后，在ps2中，进入opl后，选择ETH游戏，就能看到你刚刚放入的游戏，圆圈键运行。这里推荐一个下载游戏ISO的网站<https://www.oldmanemu.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f/ps2/ps2%e4%b8%ad%e6%96%87%e6%b8%b8%e6%88%8f%e5%85%a8%e9%9b%86>
 ![game](https://gitee.com/waizui/ps2guide/raw/main/images/games.jpg)
