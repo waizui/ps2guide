@@ -95,8 +95,9 @@ z
     >>![ipconfig](https://gitee.com/waizui/ps2guide/raw/main/images/ipconfig.png)
     记下图中的ipv4地址，待会儿要用。
 
->5.打开ps2，在背后插入你家的路由器接出来的网线，选中opl进入，按下手柄start键进入设置，然后按圆圈键选择网络设置。![networkconf](https://gitee.com/waizui/ps2guide/raw/main/images/ps2config.png)
+>5.打开ps2，在背后插入你家的路由器接出来的网线，选中opl进入，按下手柄start键进入设置，然后按圆圈键选择网络设置。
     >>进入设置后，将下图1处的地址配置为192.168.0.10，IP地址模式设置为静态。将2处的地址填上刚刚记下的ipv4地址，将共享处填上ps2smb,将使用者天使guest,密码不用填,完成后点重新连接，如果连接失败，可能是地址被占用。可以将1处的地址最后一位数换一下再试。成功或返回，点击保存设置，不然下次启动还需要配置ip地址。
+    ![networkconf](https://gitee.com/waizui/ps2guide/raw/main/images/psconf.png)
 
 >6.回到电脑，你会看到刚刚建立的ps2smb文件夹下多了许多文件夹，其中有一个叫做DVD的文件夹，所有你从网上下载的ps2游戏，都是以iso为后缀名的，放到这个文件夹下面，ps2会自动识别。
     >>![DVD](https://gitee.com/waizui/ps2guide/raw/main/images/dvdFolder.png)
