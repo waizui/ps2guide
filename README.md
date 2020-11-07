@@ -1,4 +1,4 @@
-# ps2 入坑指南 （新手向）
+# ps2 入坑指南 （完全新手向）
 
 # playstation2 set-up guide (noob friendly)
 
@@ -25,5 +25,56 @@
 > Q:一定要装硬盘才能够玩吗?
 >>A:不，可以不用硬盘，破解后的ps2，可以使用U盘，网络硬盘来加载游戏，不一定非要硬盘.
 
+3. 
+    >型号(Model No):无论哪种机型都对应一个具体的型号，这个型号很重要，在某些较高型号的机型上，这里要说的破解方式是用不了的。机型越高，发售时间越晚。查看机型在ps2主机后面的标签上,配图红圈中为本人的ps2型号。
+
+    >![model_no](https://gitee.com/waizui/ps2guide/raw/main/images/modelNo.jpg)
+
+> Q:各个机型之间有性能差别吗?
+>>A:没有，或者说我不知道，据我所知，所有机型都可以玩所有的ps2游戏。
+
+
+
+## 2.配件(accessories)
+
+以下是几个游玩的基本配件
+
 1. 
-    >型号(Model No)
+    >手柄（controller):有线无线皆可，ps2的手柄存在摇杆飘移的问题，如果有条件可以买稍微好一点的原装手柄，下图四为本人的手柄，淘宝垃圾19.9包邮组装无线手柄，左右摇杆均轻微飘逸，但也可以用，只是对FPS类游戏真的不友好。
+
+    >![contorller](https://gitee.com/waizui/ps2guide/raw/main/images/controller.jpg)
+
+2. 
+    >记忆卡（memoryCard）:ps2的唯一内置储存介质，游戏存档和系统设置都存在里面，越大越好，淘宝很多，十几块钱。此外你还必须买另外一张记忆卡，里面装得有FMCB，用来破解，也很便宜，几十块钱。ps2可以插两张记忆卡，其中一张，是用来破解的，装有FMCB的特殊记忆卡，这张卡插在1号记忆卡插口。如何破解在后面说，非常简单。
+
+    >![memoryCard](https://gitee.com/waizui/ps2guide/raw/main/images/memorycard.jpg)
+z
+1. 
+    >视频线(video cable):ps2支持几种视频输出格式，这里我本人只推荐两种  
+        
+    >1.分量色差线(component cable)：也是是色差端子，部分电视有色差接口，优点是画质清晰，缺点是不好转接到显示器（转接器贵），且有一部分电视不支持。ps2不附带此线，一般需要另外购买。配图本人用的是色差端子，长这样:
+    >>![componentCable](https://gitee.com/waizui/ps2guide/raw/main/images/componentcable1.jpg)
+    >>购买分量线时要注意你的电视机后面有没有这样的五个插口，上面写得有Pr，Pb,y
+    >>![componentCable1](https://gitee.com/waizui/ps2guide/raw/main/images/componentcable.jpg)
+
+    >2.AV线(composite cable)：也就是最常见的电视机视频线，优点是兼容性好，几乎所有电视都可以接AV线，并且转接器便宜，缺点是画质很糊，不清晰，不过很多追求原汁原味的人都用AV线，一般买ps2会附赠一条AV线。
+    >>![compositeCable](https://gitee.com/waizui/ps2guide/raw/main/images/avcable.jpg)
+
+> Q:转接器什么意思?
+>>A:无论是分量线，还是AV线，这些都不是为电脑显示器设计的，一般只有电视机才有相应的接口，如果想要在电脑显示器上显示ps2输出的画面，那就需要把这些线转为电脑显示器信号，就会用到转接器一般来说时HDMI，AV转接器比较便宜，色差转接器比较贵。
+
+## 3.破解(soft mod)
+
+很多新手都关心破解是不是非常难，这里先说下一，其实非常简单，只需要在淘宝买一个装得有FMCB的记忆卡就可以了，然后插在记忆卡插槽的1号位置，现在这种卡又是记忆卡，又可以启动破解系统。买的时候要注意下面两个问题。
+
+1. 本文只推荐通过网络硬盘加载游戏，所以你买的FMCB记忆卡里，要包括OPL这个程序
+    
+    OPL  这是一个加载程序，可以从别的储存介质里面加载游戏，U盘，硬盘，或者网络硬盘。我目前使用的版本是 v0.9.3 这个版本比较稳定，用新版（比如v1559）时，有的游戏加载不了，战神1会卡在潘多拉神殿
+      >[opl]()
+2. 插上FMCB记忆卡后，打开ps2，就可以直接启动OPL，按下左右方向键，然后进入选择游戏界面，当然，需要提前配置好你的储存介质。
+
+## 4.配置网络硬盘
+
+配置网络硬盘会分为两部分，配置Windows10的网络硬盘（新手向），配置Linux的网络硬盘(进阶)。
+   
+
