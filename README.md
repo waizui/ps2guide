@@ -124,7 +124,7 @@ z
 编辑samba.conf 使用你自己熟悉的编辑器,这里使用vim
 
      sudo vim /etc/samba/smb.conf
-在尾部追加图中的文字
+在尾部追加图中的文字,忽略蓝色部分，那是注释
 
 ![smb](https://gitee.com/waizui/ps2guide/raw/main/images/smb.png)
 
