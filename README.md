@@ -113,7 +113,7 @@ z
 ![game](https://gitee.com/waizui/ps2guide/raw/main/images/games.jpg)
 
 ### Linux篇
-    如果你有使用linux的需求，我假定你已经懂了基本的知识。本人的测试机为树莓派3b+,系统为raspbian外挂硬盘，分区为ntfs。以下命令对于Debian系通用。
+如果你有使用linux的需求，我假定你已经懂了基本的知识。本人的测试机为树莓派3b+,系统为raspbian外挂硬盘，分区为ntfs。以下命令对于Debian系通用。
 
 在你的ntfs分区上建立一个ps2smb的文件夹.
 
@@ -123,7 +123,7 @@ z
 
 编辑samba.conf 使用你自己熟悉的编辑器,这里使用vim
 
-     vim /etc/samba/smb.conf
+     sudo vim /etc/samba/smb.conf
 在尾部追加图中的文字
 
 ![smb](https://gitee.com/waizui/ps2guide/raw/main/images/smb.png)
